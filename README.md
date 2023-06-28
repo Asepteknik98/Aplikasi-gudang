@@ -1,5 +1,5 @@
 # App-Uas
 # Kelompok
-# Asep Setiadi, Saifullah Habibi Nasutio
+# Asep Setiadi, Saifullah Habibi Nasution
 # Agil Munawar, Siti Aisyah
-# M. Dzaky Aulia
+# M Dzaky Aulia
