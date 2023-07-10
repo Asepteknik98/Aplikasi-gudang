@@ -3,7 +3,6 @@
 if (isset($_GET['id_supplier']) && !empty($_GET['id_supplier'])) {
     $id_supplier = $_GET['id_supplier'];
 
-    // Inisialisasi objek application
     $app = new application;
 
     // Query untuk mengambil data supplier berdasarkan id_supplier
@@ -31,18 +30,14 @@ if (isset($_GET['id_supplier']) && !empty($_GET['id_supplier'])) {
 
         // Periksa apakah tombol "Batal" ditekan
         if (isset($_POST['batal'])) {
-            // Tambahkan logika atau tindakan yang ingin dilakukan saat tombol "Batal" ditekan
-            // Contoh: Redirect ke halaman lain atau lakukan operasi lainnya
-            // ...
-
-            // Redirect ke halaman lain
-            //header("Location: halaman_lain.php");
+            // Redirect kembali ke halaman view_supplier.php dengan menyertakan parameter id_supplier
+            header("Location: view_supplier.php?id_supplier=$id_supplier");
             exit();
         }
     } else {
         // Data supplier tidak ditemukan, redirect ke halaman view_supplier.php
         header("Location: view_supplier.php");
-        //exit();
+        exit();
     }
 } else {
     // Parameter id_supplier tidak ada, redirect ke halaman view_supplier.php
